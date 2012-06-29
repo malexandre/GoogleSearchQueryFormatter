@@ -22,35 +22,35 @@ class CMain:
         self.test3()
         
     def parse(self, toParse):
-        print(self.parser.parse(toParse))
+        self.parser.parse(toParse)
         
     def simpleTest(self):
         print("'isTrue = 1' =>")
-        print(self.parser.parse("isTrue = 1"))
+        self.parser.parse("isTrue = 1")
         
     def simpleTestWithParanthese(self):
         print("'(isTrue = 1)' =>")
-        print(self.parser.parse("(isTrue = 1)"))
+        self.parser.parse("(isTrue = 1)")
         
     def simpleAnd(self):
         print("'(isTrue = 1 AND bidule = string)' =>")
-        print(self.parser.parse("(isTrue = 1 AND bidule = string)"))
+        self.parser.parse("(isTrue = 1 AND bidule = string)")
         
     def simpleOr(self):
         print("'(isTrue = 1 OR bidule = string)' =>")
-        print(self.parser.parse("(isTrue = 1 OR bidule = string)"))
+        self.parser.parse("(isTrue = 1 OR bidule = string)")
         
     def test1(self):
         print("'((isTrue = 1 AND bidule = string) OR bidule = otherString)' =>")
-        print(self.parser.parse("((isTrue = 1 AND bidule = string) OR bidule = otherString)"))
+        self.parser.parse("((isTrue = 1 AND bidule = string) OR bidule = otherString)")
         
     def test2(self):
         print("'((isTrue = 1 AND bidule = string) OR (isTrue = false AND bidule = otherString))' =>")
-        print(self.parser.parse("((isTrue = 1 AND bidule = string) OR (isTrue = false AND bidule = otherString))"))
+        self.parser.parse("((isTrue = 1 AND bidule = string) OR (isTrue = false AND bidule = otherString))")
         
     def test3(self):
         print("'((isTrue = 1 AND bidule = string) OR (isTrue = false AND bidule = otherString)) AND statement' =>")
-        print(self.parser.parse("((isTrue = 1 AND bidule = string) OR (isTrue = false AND bidule = otherString)) AND statement"))
+        self.parser.parse("((isTrue = 1 AND bidule = string) OR (isTrue = false AND bidule = otherString)) AND statement")
 
 main = CMain()
 

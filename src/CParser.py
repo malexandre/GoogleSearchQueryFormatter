@@ -8,7 +8,7 @@ class CParser:
     
     def getIndentation(self, x):
         toDisplay = ""
-        for i in range(x):
+        for _ in range(x):
             toDisplay = toDisplay + "    "
         return toDisplay
     

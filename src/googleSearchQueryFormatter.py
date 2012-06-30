@@ -7,7 +7,7 @@ Created on 27 juin 2012
 import CParser
 import sys
 
-class CMain:
+class CGoogleSearchQueryFormatter:
 
     def __init__(self):
         self.parser = CParser.CParser()
@@ -52,17 +52,17 @@ class CMain:
         print("'((isTrue = 1 AND bidule = string) OR (isTrue = false AND bidule = otherString)) AND statement' =>")
         self.parser.parse("((isTrue = 1 AND bidule = string) OR (isTrue = false AND bidule = otherString)) AND statement")
 
-main = CMain()
+formatter = CGoogleSearchQueryFormatter()
 
 if (len(sys.argv) > 1):
     if(sys.argv[1] == "-h" or sys.argv[1] == "-?"):
         print("Hello World!")
-        print("""Usage : python CMain.py [-h | -? | -test] [string arg]
+        print("""Usage : python CGoogleSearchQueryFormatter.py [-h | -? | -test] [string arg]
                     -h / -? : Display this help
                     -test : Run the built in test""")
     elif(sys.argv[1] != "-test"):
-        main.parse(sys.argv[1])
+        formatter.parse(sys.argv[1])
     else:
-        main.test()
+        formatter.test()
 else:
-    main.test()
+    formatter.test()
